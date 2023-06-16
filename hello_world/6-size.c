@@ -1,14 +1,12 @@
 #include <stdio.h>
-
 /**
- * main - With the provided variables print the strings provided
+ * main - print the strings in the printf functions
  *
  * Description: using the main function, print the size
  * of the various types available on the computer.
  *
  * Return: a value of 0
  */
-
 int main(void)
 {
 	char c;
