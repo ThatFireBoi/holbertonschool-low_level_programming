@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - print the strings in the printf functions
+ * main - print the strings in printf
  *
  * Description: print the size of the various types
- * available on the computer
+ * available
  *
- * Return: a value of 0
+ * Return: 0
  */
 int main(void)
 {
