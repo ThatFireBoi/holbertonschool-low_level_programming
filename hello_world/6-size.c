@@ -3,8 +3,8 @@
 /**
  * main - print the strings in the printf functions
  *
- * Description: using the main function, print the size
- * of the various types available on the computer
+ * Description: print the size of the various types
+ * available on the computer
  *
  * Return: a value of 0
  */
