@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/*
- *Main - print the provided string by using puts.
+/**
+ * Main - print the provided string by using puts.
  *
- * Puts : prints out Programming is like building a multilingual puzzle.
- *
+ * Description: Puts prints out the string Programming is
+ * like building a multilingual puzzle and
  * Returns 0.
  */
 
