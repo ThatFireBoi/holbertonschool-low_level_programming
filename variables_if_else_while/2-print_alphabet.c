@@ -11,7 +11,7 @@ int main(void)
 	char ch = 'a';
 
 	for (ch = 'a'; ch <= 'z'; ch++)
-		puthcar(ch);
+		putchar(ch);
 
 	return (0);
 }
