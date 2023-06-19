@@ -11,7 +11,7 @@ int main(void)
 
 	for (ch = '0'; ch <= '9'; ch++)
 	{
-		puthcar(ch);
+		putchar(ch);
 	}
 	for (ch = 'a'; ch <= 'f'; ch++)
 	{
