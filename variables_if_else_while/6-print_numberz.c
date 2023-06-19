@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - write the characters a-z in lowercase
+ * main - write the single digit numbers of base 10.
  *
  * Return: 0.
  */
