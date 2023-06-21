@@ -7,7 +7,7 @@
  * Return: 1 or 0.
  */
 
-int _isalpha(int c);
+int _isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || if (c >= 'A' && c <= 'A'))
 	{
