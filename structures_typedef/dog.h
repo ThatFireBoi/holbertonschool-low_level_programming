@@ -1,5 +1,7 @@
 #ifndef __dog__
 #define __dog__
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * dog - structure
@@ -10,9 +12,6 @@
  *
  *@owner: dogs owner
  */
-
-#include <stdio.h>
-#include <stdlib.h>
 
 struct dog
 {
