@@ -1,100 +1,88 @@
-#include <stdarg.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "variadic_functions.h"
+#include<stdio.h>
+#include<stdarg.h>
+/**
+ * p_char - print char
+ * @list:arg
+ * Return: void
+ */
 
-/**
- * print_c - function that prints anything
- *
- * @a: list to give
- *
- * Return: always 0
- */
-int print_c(va_list a)
+void p_char(va_list list)
 {
-	printf("%c", va_arg(a, int));
-	return (0);
+	printf("%c", va_arg(list, int));
 }
 /**
- * print_i - prints int
- *
- * @a: list to give
- *
- * Return: always 0
+ * p_string - print string
+ * @list:arg
+ * Return: void
  */
-int print_i(va_list a)
-{
-	printf("%d", va_arg(a, int));
-	return (0);
-}
-/**
- * print_f - prints float
- *
- * @a: list to give
- *
- * Return: always 0
- */
-int print_f(va_list a)
-{
-	printf("%f", va_arg(a, double));
-	return (0);
-}
-/**
- * print_s - prints string
- *
- * @a: list to give
- *
- * Return: always 0
- */
-int print_s(va_list a)
-{
-	char *s;
 
-	s = va_arg(a, char *);
-	if (s == NULL)
-	{
-		printf("(nil)");
-		return (0);
-	}
-	printf("%s", s);
-	return (0);
+void p_string(va_list list)
+{
+	char *str;
+
+	str = va_arg(list, char*);
+	if (str == NULL)
+		str = "(nil)";
+printf("%s", str);
 }
 /**
- * print_all - prints all
- *
- * @format: format string that says arg types
+ * p_integer - print integer
+ * @list:arg
+ * Return: void
+ */
+
+void p_integer(va_list list)
+{
+	printf("%i", va_arg(list, int));
+}
+/**
+ * p_float - print float
+ * @list:arg
+ * Return: void
+ */
+
+void p_float(va_list list)
+{
+	printf("%f", va_arg(list, double));
+}
+/**
+ * print_all - print everything
+ * @format:arg
+ * Return: void
  */
 void print_all(const char * const format, ...)
+
 {
-	int i, j;
-	char *sep = "";
-	char *sep2 = ", ";
-	va_list anyArgs;
-	printer ops[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"s", print_s},
-		{"f", print_f},
+	unsigned int i, j;
+	t_print t[] = {
+		{"c", p_char},
+		{"s", p_string},
+		{"i", p_integer},
+		{"f", p_float},
 		{NULL, NULL}
 	};
+	va_list valist;
+	char *s = "";
 
-	va_start(anyArgs, format);
+	va_start(valist, format);
 	i = 0;
-	while (format != NULL && format[i])
+	while (format && format[i])
 	{
 		j = 0;
-		while (ops[j].f != NULL)
+		while (t[j].x != NULL)
 		{
-			if (format[i] == *(ops[j].c))
+			if (*(t[j].x) == format[i])
 			{
-				printf("%s", sep);
-				ops[j].f(anyArgs);
+				printf("%s", s);
+				t[j].T_func(valist);
+				s = ", ";
+				break;
 			}
 			j++;
 		}
-		sep = sep2;
 		i++;
 	}
+	va_end(valist);
 	printf("\n");
-	va_end(anyArgs);
 }
