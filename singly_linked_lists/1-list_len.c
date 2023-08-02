@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_list - function that returns the number of elements
+ * list_len - function that returns the number of elements
  *
  * @h: the linked list
  *
