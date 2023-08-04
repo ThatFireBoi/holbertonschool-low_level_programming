@@ -7,7 +7,7 @@
  *
  * @head: A pointer to the head of the list
  *
- * @str: integer for the new node
+ * @n: integer for the new node
  *
  * Return: the address of the new element; NULL if it failed
  */
