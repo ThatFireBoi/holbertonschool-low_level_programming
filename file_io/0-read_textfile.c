@@ -8,7 +8,7 @@
  *
  * @letters: number of letters to be read and printed
  *
- * Return: File cannot be opened, 0; filename NULL, 0; write fails, 0.
+ * Return: File cannot be opened, 0, filename NULL, 0, write fails, 0.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (o == -1 || r == -1 || w == -1 || w != r)
 	{
-		free (buffer);
+		free(buffer);
 		return (0);
 	}
 
