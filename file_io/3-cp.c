@@ -1,22 +1,16 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
-
 /**
  * main - Program that copies the content of a file to another file
- *
  * @argc: Argument count
- *
  * @argv: vector, array of arguments
- *
  * Return: integer
  */
-
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int file_to, file_from, buffer_limit = 1024, w = 0;
 	char *buffer[1024];
-
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -34,7 +28,7 @@ int main(int argc, char* argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		close(file_from), exit(99);
 	}
-	while(buffer_limit == 1024)
+	while (buffer_limit == 1024)
 	{
 		buffer_limit = read(file_from, buffer, 1024);
 		if (buffer_limit == -1)
