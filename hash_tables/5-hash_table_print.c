@@ -3,7 +3,7 @@
 /**
  * hash_table_print - Function that prints a hash table
  *
- * @ht: hash table
+ * @ht: the hash table
  *
  * Return: Printed hash table or NULL, doesn't print anything
  */
